@@ -1,0 +1,82 @@
+CORESAN — Sistema de Ofertas
+==============================
+
+ESTRUCTURA DE CARPETAS
+-----------------------
+coresan-ofertas/
+├── oferta.html         ← el archivo que abrís en el navegador
+├── imagenes/           ← acá van todas las fotos de productos
+│   └── grasa-jocoli800g.jpg  (ejemplo incluido)
+└── LEEME.txt           ← este archivo
+
+CÓMO HACER UNA OFERTA NUEVA
+-----------------------------
+1. Descargá la foto del producto y ponela en la carpeta "imagenes/"
+2. Abrí "oferta.html" con VS Code (o cualquier editor de texto)
+3. Cambiá los siguientes datos:
+
+   — IMAGEN:
+     Buscá esta línea:
+       <img src="imagenes/grasa-jocoli800g.jpg" alt="Producto" />
+     Cambiá el nombre del archivo por el de tu foto nueva.
+
+   — NOMBRE DEL PRODUCTO:
+     Buscá esta línea:
+       <div class="producto-titulo">Grasa Jocolí</div>
+     Cambiá el texto entre las etiquetas.
+
+   — DESCRIPCIÓN:
+     Buscá:
+       <div class="producto-sub">Grasa vacuna comestible · 100% bovina</div>
+
+   — ETIQUETA SOBRE LA IMAGEN:
+     Buscá:
+       <div class="img-label">🫓 ¡Para las tortafritas!</div>
+     Cambiá el emoji y el texto.
+
+   — PRECIOS:
+     Cada precio tiene esta estructura:
+       <div class="precio-row">
+         <span class="precio-cantidad">× 800 g</span>
+         <span class="precio-valor">$2.850</span>
+       </div>
+     Cambiá la cantidad y el precio. Podés copiar y pegar filas
+     para agregar más, o borrar las que sobren.
+
+   — PRECIO DESTACADO (mayorista/caja):
+     La fila con class="precio-row destacado" se ve diferente.
+     Asegurate de que solo UNA fila tenga esa clase.
+
+   — ETIQUETA DE OFERTA (arriba a la derecha):
+     Buscá:
+       <div class="oferta-badge">¡OFERTA!</div>
+     Podés cambiarlo por "¡PROMO!" o lo que quieras.
+
+   — PIE DE PÁGINA:
+     Buscá:
+       <div class="footer-contacto">Consultar por WhatsApp</div>
+     Podés poner el número: "WhatsApp: 260 XXX-XXXX"
+
+4. Guardá el archivo.
+5. Abrilo en Google Chrome (doble clic o arrastrar al navegador).
+6. Para capturar como imagen:
+   — En Chrome: click derecho → Imprimir → Guardar como PDF
+     (o usá Ctrl+Shift+S para captura de pantalla completa)
+   — Extensión recomendada: "GoFullPage" (Chrome Web Store, gratis)
+     Hace captura de toda la página con un clic.
+
+PARA AGREGAR UNA FILA DE PRECIO EXTRA
+---------------------------------------
+Copiá este bloque y pegalo dentro de <div class="precios-grid">:
+
+  <div class="precio-row">
+    <span class="precio-cantidad">× CANTIDAD</span>
+    <span class="precio-valor">$PRECIO</span>
+  </div>
+
+PARA QUITAR LA ETIQUETA SOBRE LA IMAGEN
+-----------------------------------------
+Borrá o comentá este bloque completo:
+  <div class="img-label">
+    🫓 ¡Para las tortafritas!
+  </div>
